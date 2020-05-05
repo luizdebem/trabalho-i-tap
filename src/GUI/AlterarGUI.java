@@ -142,6 +142,7 @@ public class AlterarGUI extends javax.swing.JFrame {
             Double preco = Double.parseDouble(this.inputPreco.getText());
             RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
             produtos.atualizarArquivo(codigo, produto);
+            JOptionPane.showMessageDialog(null, "Produto de código " + codigo + " atualizado com sucesso.");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
         }

@@ -90,14 +90,14 @@ public class ExcluirGUI extends javax.swing.JFrame {
                 System.out.println(pesquisa);
                 int codigo = produtos.pesquisarRegistroNome(pesquisa).getCodigo();
                 produtos.excluirLogico(codigo);
-                System.out.println("Opção nome! " + pesquisa + " " + codigo);
+                JOptionPane.showMessageDialog(null, "Produto de código " + codigo + " marcado como deletado.");
             } else if (this.opcaoCodigo.isSelected()) {
                 GerenciadorProduto produtos = new GerenciadorProduto();
                 boolean result = produtos.excluirLogico(Integer.parseInt(this.textField.getText()));
                 if (!result) {
                     throw new NullPointerException();
                 }
-                System.out.println("Opção código! " + Integer.parseInt(this.textField.getText()));
+                JOptionPane.showMessageDialog(null, "Produto de código " + this.textField.getText() + " marcado como deletado.");
             } else {
                 throw new Exception();
             }

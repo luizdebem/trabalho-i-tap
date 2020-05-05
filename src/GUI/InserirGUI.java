@@ -122,6 +122,7 @@ public class InserirGUI extends javax.swing.JFrame {
                 Double preco = Double.parseDouble(this.inputPreco.getText());
                 RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
                 gerente.inserirFimArquivo(produto);
+                JOptionPane.showMessageDialog(null, "Produto de código " + codigo + " cadastrado com sucesso.");
             }
 
         } catch (Exception e) {
