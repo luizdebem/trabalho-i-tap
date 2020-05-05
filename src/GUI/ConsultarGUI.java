@@ -47,15 +47,15 @@ public class ConsultarGUI extends javax.swing.JFrame {
 
         radioGroup.add(opcaoCodigo);
         opcaoCodigo.setText("Código");
-        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
 
         radioGroup.add(opcaoNome);
         opcaoNome.setText("Nome");
-        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
 
         jLabel1.setText("Você deseja consultar através do código ou nome?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
-        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 170, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, -1, -1));
+        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 170, -1));
 
         cancelarBtn.setText("Cancelar");
         cancelarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class ConsultarGUI extends javax.swing.JFrame {
                 cancelarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 120, 50));
+        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 120, 50));
 
         consultarBtn.setText("Consultar");
         consultarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +71,7 @@ public class ConsultarGUI extends javax.swing.JFrame {
                 consultarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(consultarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 50));
+        getContentPane().add(consultarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 120, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

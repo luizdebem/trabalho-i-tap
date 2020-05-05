@@ -47,15 +47,15 @@ public class ExcluirGUI extends javax.swing.JFrame {
 
         radioGroup.add(opcaoCodigo);
         opcaoCodigo.setText("Código");
-        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
 
         radioGroup.add(opcaoNome);
         opcaoNome.setText("Nome");
-        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
 
         jLabel1.setText("Você deseja excluir através do código ou nome?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
-        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 170, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
+        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 170, -1));
 
         cancelarBtn.setText("Cancelar");
         cancelarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class ExcluirGUI extends javax.swing.JFrame {
                 cancelarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 120, 50));
+        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 120, 50));
 
         excluirBtn.setText("Excluir");
         excluirBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +71,7 @@ public class ExcluirGUI extends javax.swing.JFrame {
                 excluirBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(excluirBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 120, 50));
+        getContentPane().add(excluirBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 120, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

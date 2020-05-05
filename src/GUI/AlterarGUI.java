@@ -60,15 +60,15 @@ public class AlterarGUI extends javax.swing.JFrame {
 
         radioGroup.add(opcaoCodigo);
         opcaoCodigo.setText("Código");
-        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        getContentPane().add(opcaoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
         radioGroup.add(opcaoNome);
         opcaoNome.setText("Nome");
-        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        getContentPane().add(opcaoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jLabel1.setText("Você deseja alterar através do código ou nome?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 170, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+        getContentPane().add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 170, -1));
 
         cancelarBtn.setText("Cancelar");
         cancelarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class AlterarGUI extends javax.swing.JFrame {
                 cancelarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 120, 50));
+        getContentPane().add(cancelarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 120, 50));
 
         alterarBtn.setText("Alterar");
         alterarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -84,34 +84,34 @@ public class AlterarGUI extends javax.swing.JFrame {
                 alterarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(alterarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 120, 50));
+        getContentPane().add(alterarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 120, 50));
 
         jLabel2.setText("Código");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-        getContentPane().add(inputMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 100, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        getContentPane().add(inputMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 100, -1));
 
         jLabel3.setText("Nome");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
         jLabel4.setText("Modelo");
         jLabel4.setToolTipText("");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         jLabel5.setText("Marca");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
 
         jLabel6.setText("Estado");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
         jLabel7.setText("Preço");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, -1, -1));
 
         inputCodigo.setEnabled(false);
-        getContentPane().add(inputCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 100, -1));
-        getContentPane().add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 100, -1));
-        getContentPane().add(inputPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 100, -1));
-        getContentPane().add(inputModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 100, -1));
-        getContentPane().add(inputEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 100, -1));
+        getContentPane().add(inputCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 100, -1));
+        getContentPane().add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 100, -1));
+        getContentPane().add(inputPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, 100, -1));
+        getContentPane().add(inputModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 100, -1));
+        getContentPane().add(inputEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 100, -1));
 
         pesquisarBtn.setText("Pesquisar");
         pesquisarBtn.setToolTipText("");
@@ -120,7 +120,7 @@ public class AlterarGUI extends javax.swing.JFrame {
                 pesquisarBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(pesquisarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 110, 50));
+        getContentPane().add(pesquisarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 120, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -56,24 +56,24 @@ public class InserirGUI extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Código");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-        getContentPane().add(inputMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 100, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+        getContentPane().add(inputMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, -1));
 
         jLabel2.setText("Nome");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
         jLabel3.setText("Modelo");
         jLabel3.setToolTipText("");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
 
         jLabel4.setText("Marca");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
 
         jLabel5.setText("Estado");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, -1, -1));
 
         jLabel6.setText("Preço");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, -1, -1));
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class InserirGUI extends javax.swing.JFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 140, -1));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 140, -1));
 
         btnSalvar.setText("Salvar produto");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,15 +89,15 @@ public class InserirGUI extends javax.swing.JFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 140, -1));
-        getContentPane().add(inputCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 100, -1));
-        getContentPane().add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, -1));
-        getContentPane().add(inputPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 100, -1));
-        getContentPane().add(inputModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 100, -1));
-        getContentPane().add(inputEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 100, -1));
+        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 140, -1));
+        getContentPane().add(inputCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 100, -1));
+        getContentPane().add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 100, -1));
+        getContentPane().add(inputPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, 100, -1));
+        getContentPane().add(inputModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 100, -1));
+        getContentPane().add(inputEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 100, -1));
 
         jLabel7.setText("Todos os campos são obrigatórios.");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
