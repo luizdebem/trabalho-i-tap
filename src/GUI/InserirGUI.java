@@ -1,6 +1,5 @@
 package GUI;
 
-import Modelos.Produto;
 import Controllers.*;
 import javax.swing.JOptionPane;
 
@@ -9,7 +8,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luiz
@@ -110,15 +108,22 @@ public class InserirGUI extends javax.swing.JFrame {
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
         try {
-            int codigo = Integer.parseInt(this.inputCodigo.getText());
-            String nome = this.inputNome.getText();
-            String modelo = this.inputModelo.getText();
-            String marca = this.inputMarca.getText();
-            String estado = this.inputEstado.getText();
-            Double preco = Double.parseDouble(this.inputPreco.getText());
-            RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
             GerenciadorProduto gerente = new GerenciadorProduto();
-            gerente.inserirFimArquivo(produto);
+            int codigo = Integer.parseInt(this.inputCodigo.getText());
+
+            RegistroProduto chaveDuplicada = gerente.pesquisarRegistro(codigo);
+            if (chaveDuplicada != null) {
+                JOptionPane.showMessageDialog(null, "Chave única já utilizada.");
+            } else {
+                String nome = this.inputNome.getText();
+                String modelo = this.inputModelo.getText();
+                String marca = this.inputMarca.getText();
+                String estado = this.inputEstado.getText();
+                Double preco = Double.parseDouble(this.inputPreco.getText());
+                RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
+                gerente.inserirFimArquivo(produto);
+            }
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
         }
