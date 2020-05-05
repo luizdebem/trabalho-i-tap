@@ -190,7 +190,7 @@ public class MultisonoGUI extends javax.swing.JFrame {
             // TODO add your handling code here:
             GerenciadorProduto produtos = new GerenciadorProduto();
             
-            JOptionPane.showMessageDialog(null, "Tamanho do arquivo: " + produtos.getArquivo().length() + "kb");
+            JOptionPane.showMessageDialog(null, "Tamanho do arquivo: " + produtos.getArquivo().length() + " bytes");
         } catch (IOException e) {
         }
     }//GEN-LAST:event_tamanhoArquivoMenuActionPerformed
