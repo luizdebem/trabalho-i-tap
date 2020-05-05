@@ -83,16 +83,25 @@ public class ConsultarGUI extends javax.swing.JFrame {
 
     private void consultarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarBtnActionPerformed
         // TODO add your handling code here:
-        if (this.opcaoNome.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            String pesquisa = this.textField.getText();
-            RegistroProduto resultado = produtos.pesquisarRegistroNome(pesquisa);
-            JOptionPane.showMessageDialog(null, resultado.toString());
-        } else if (this.opcaoCodigo.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            RegistroProduto resultado = produtos.pesquisarRegistro(Integer.parseInt(this.textField.getText()));
-            JOptionPane.showMessageDialog(null, resultado.toString());
+        try {
+            if (this.opcaoNome.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                String pesquisa = this.textField.getText();
+                RegistroProduto resultado = produtos.pesquisarRegistroNome(pesquisa);
+                JOptionPane.showMessageDialog(null, resultado.toString());
+            } else if (this.opcaoCodigo.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                RegistroProduto resultado = produtos.pesquisarRegistro(Integer.parseInt(this.textField.getText()));
+                JOptionPane.showMessageDialog(null, resultado.toString());
+            } else {
+                throw new Exception();
+            }
+        } catch (NullPointerException npe) {
+            JOptionPane.showMessageDialog(null, "Registro não encontrado");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
         }
+
     }//GEN-LAST:event_consultarBtnActionPerformed
 
     /**

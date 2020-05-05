@@ -1,6 +1,7 @@
 package GUI;
 
 import Controllers.*;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -131,29 +132,43 @@ public class AlterarGUI extends javax.swing.JFrame {
 
     private void alterarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarBtnActionPerformed
         // TODO add your handling code here:
-        GerenciadorProduto produtos = new GerenciadorProduto();
-        int codigo = Integer.parseInt(this.inputCodigo.getText());
-        String nome = this.inputNome.getText();
-        String modelo = this.inputModelo.getText();
-        String marca = this.inputMarca.getText();
-        String estado = this.inputEstado.getText();
-        Double preco = Double.parseDouble(this.inputPreco.getText());
-        RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
-        produtos.atualizarArquivo(codigo, produto);
+        try {
+            GerenciadorProduto produtos = new GerenciadorProduto();
+            int codigo = Integer.parseInt(this.inputCodigo.getText());
+            String nome = this.inputNome.getText();
+            String modelo = this.inputModelo.getText();
+            String marca = this.inputMarca.getText();
+            String estado = this.inputEstado.getText();
+            Double preco = Double.parseDouble(this.inputPreco.getText());
+            RegistroProduto produto = new RegistroProduto(codigo, nome, modelo, marca, estado, preco, 0);
+            produtos.atualizarArquivo(codigo, produto);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
+        }
+
     }//GEN-LAST:event_alterarBtnActionPerformed
 
     private void pesquisarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarBtnActionPerformed
         // TODO add your handling code here:
-        if (this.opcaoNome.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            String pesquisa = this.textField.getText();
-            RegistroProduto resultado = produtos.pesquisarRegistroNome(pesquisa);
-            popularForm(resultado);
-        } else if (this.opcaoCodigo.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            RegistroProduto resultado = produtos.pesquisarRegistro(Integer.parseInt(this.textField.getText()));
-            popularForm(resultado);
+        try {
+            if (this.opcaoNome.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                String pesquisa = this.textField.getText();
+                RegistroProduto resultado = produtos.pesquisarRegistroNome(pesquisa);
+                popularForm(resultado);
+            } else if (this.opcaoCodigo.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                RegistroProduto resultado = produtos.pesquisarRegistro(Integer.parseInt(this.textField.getText()));
+                popularForm(resultado);
+            } else {
+                throw new Exception();
+            }
+        } catch (NullPointerException  npe) {
+            JOptionPane.showMessageDialog(null, "Registro não encontrado");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
         }
+
     }//GEN-LAST:event_pesquisarBtnActionPerformed
 
     private void popularForm(RegistroProduto produto) {

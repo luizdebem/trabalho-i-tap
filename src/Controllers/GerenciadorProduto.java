@@ -284,9 +284,9 @@ public class GerenciadorProduto {
                 return retorno;
             }
         } catch (EOFException eof) {
-
+            eof.printStackTrace();
         } catch (IOException io) {
-
+            io.printStackTrace();
         }
         return retorno;
     }

@@ -83,18 +83,30 @@ public class ExcluirGUI extends javax.swing.JFrame {
 
     private void excluirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirBtnActionPerformed
         // TODO add your handling code here:
-        if (this.opcaoNome.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            String pesquisa = this.textField.getText();
-            System.out.println(pesquisa);
-            int codigo = produtos.pesquisarRegistroNome(pesquisa).getCodigo();
-            produtos.excluirLogico(codigo);
-            System.out.println("Opção nome! " + pesquisa + " " + codigo);
-        } else if (this.opcaoCodigo.isSelected()) {
-            GerenciadorProduto produtos = new GerenciadorProduto();
-            produtos.excluirLogico(Integer.parseInt(this.textField.getText()));
-            System.out.println("Opção código! " + Integer.parseInt(this.textField.getText()));
+        try {
+            if (this.opcaoNome.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                String pesquisa = this.textField.getText();
+                System.out.println(pesquisa);
+                int codigo = produtos.pesquisarRegistroNome(pesquisa).getCodigo();
+                produtos.excluirLogico(codigo);
+                System.out.println("Opção nome! " + pesquisa + " " + codigo);
+            } else if (this.opcaoCodigo.isSelected()) {
+                GerenciadorProduto produtos = new GerenciadorProduto();
+                boolean result = produtos.excluirLogico(Integer.parseInt(this.textField.getText()));
+                if (!result) {
+                    throw new NullPointerException();
+                }
+                System.out.println("Opção código! " + Integer.parseInt(this.textField.getText()));
+            } else {
+                throw new Exception();
+            }
+        } catch (NullPointerException npe) {
+            JOptionPane.showMessageDialog(null, "Registro não encontrado");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Existem erros no formulário, verifique os dados.");
         }
+
     }//GEN-LAST:event_excluirBtnActionPerformed
 
     /**
